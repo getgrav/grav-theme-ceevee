@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="utf-8" />
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+        {% include 'partials/metadata.html.twig' %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.ico') }}" />
+
+         {% block stylesheets %}
+                {% do assets.addCss('theme://css/bootstrap.min.css') %}
+                {% do assets.addCss('theme://css/jquery.fancybox.css') %}
+                {% do assets.addCss('theme://css/flexslider.css') %}
+                {% do assets.addCss('theme://css/styles.css') %}
+                {% do assets.addCss('theme://css/queries.css') %}
+                {% do assets.addCss('theme://css/animate.css') %}
+        {% endblock %}
+        {{ assets.css() }}
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        {% endblock head%}
+    </head>
+    <body id="top">
+        {% block header %}
+             {% include 'partials/header.html.twig' %}
+        {% endblock %}
+
+        {% block body %}
+            {% block content %}{% endblock %}
+        {% endblock %}
+
+        {% block footer %}
+             {% include 'partials/footer.html.twig' %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% do assets.add('jquery',101) %}
+            {% do assets.addJs('theme://js/waypoints.min.js') %}
+            {% do assets.addJs('theme://js/bootstrap.min.js') %}
+            {% do assets.addJs('theme://js/scripts.js') %}
+            {% do assets.addJs('theme://js/jquery.flexslider.js') %}
+            {% do assets.addJs('theme://js/modernizr.js') %}
+        {% endblock %}
+        {{ assets.js() }}
+    </body>
+</html>

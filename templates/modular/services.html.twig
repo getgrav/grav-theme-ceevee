@@ -1,0 +1,29 @@
+<section class="text-center" id="responsive_design">
+  <div class="container-fluid nopadding responsive-services">
+    <div class="wrapper">
+      <div class="iphone">
+        <div class="wp3"></div>
+      </div>
+      <div class="fluid-white"></div>
+    </div>
+    <div class="container designs">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-7">
+          <div id="servicesSlider">
+            <ul class="slides">
+              {% for slide in page.header.slides %}
+              <li>
+                <h1 class="arrow">{{ slide.title }}</h1>
+                {{ slide.content }}
+                {% if slide.link_url or slide.link_text %}
+                <p><a href="{{ slide.link_url }}" class="arrow-btn">{{ slide.link_text }} <i class="fa fa-long-arrow-right"></i></a></p>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

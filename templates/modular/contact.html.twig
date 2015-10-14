@@ -1,0 +1,33 @@
+<section class="dark-bg text-center section-padding contact-wrap" id="get_in_touch">
+  <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{ page.content }}
+      </div>
+    </div>
+
+    {% for row in page.header.boxes|batch(3) %}
+    <div class="row contact-details">
+      {% for item in row %}
+      <div class="col-md-4">
+        <div class="light-box box-hover">
+          <h2><i class="fa fa-{{ item.icon }}"></i><span>{{ item.title }}</span></h2>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="social-buttons">
+          {% for item in page.header.social %}
+          <li><a href="{{ item.url }}" class="social-btn"><i class="fa fa-{{ item.icon }}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

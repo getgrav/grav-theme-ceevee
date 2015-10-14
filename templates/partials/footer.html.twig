@@ -1,0 +1,18 @@
+<footer>
+  <div class="container">
+    <div class="row">
+    {% if site.footer.links %}
+    <div class="col-md-6">
+      <ul class="legals">
+        {% for item in site.footer.links %}
+        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    <div class="col-md-6 credit">
+      <p>Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Peter Finlan</a> exclusively for <a href="http://tympanus.net/codrops/"><em>Codrops</em></a></p>
+    </div>
+  </div>
+</div>
+</footer>

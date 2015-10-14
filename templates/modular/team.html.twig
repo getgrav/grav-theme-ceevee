@@ -1,0 +1,37 @@
+<section class="team text-center section-padding" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{ page.content }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="team-wrapper">
+        <div id="teamSlider">
+          <ul class="slides">
+            {% for row in page.header.team|batch(3) %}
+            <li>
+              {% for item in row %}
+              <div class="col-md-4 wp5 {% if item.delay %}delay-{{ item.delay }}s{% endif %}">
+                <img src="{{ page.media[item.img].url }}" alt="Team">
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.content }}</p>
+
+                <div class="social">
+                  <ul class="social-buttons">
+                    {% for icon in item.social  %}
+                    <li><a href="{{ icon.url }}" class="social-btn"><i class="fa fa-{{ icon.icon }}"></i></a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+
+              </div>
+              {% endfor %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

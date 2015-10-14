@@ -1,0 +1,30 @@
+<section class="portfolio text-center section-padding" id="portfolio">
+  <div class="container">
+    <div class="row">
+      {{ page.content }}
+      <div id="portfolioSlider">
+        <ul class="slides">
+          {% for row in page.header.portfolio|batch(3) %}
+          <li>
+            {% for item in row %}
+            <div class="col-md-4 wp4 {% if item.delay %}delay-{{ item.delay }}s{% endif %}">
+              <div class="overlay-effect effects clearfix">
+                <div class="img">
+                  <img src="{{ page.media[item.img].url }}" alt="Portfolio Item">
+                  <div class="overlay">
+                    <a href="{{ item.img_url }}" class="expand"><i class="fa fa-search"></i><br>{{ item.img_text }}</a>
+                    <a class="close-overlay hidden">x</a>
+                  </div>
+                </div>
+              </div>
+              <h2>{{ item.title }}</h2>
+              <p>{{ item.content }}</p>
+            </div>
+            {% endfor %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
