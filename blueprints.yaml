@@ -10,7 +10,7 @@ homepage: https://github.com/getgrav/grav-theme-ceevee
 demo: http://demo.getgrav.org/ceevee-skeleton
 keywords: ceevee, theme, modern, fast, responsive, html5, css3, resume
 bugs: https://github.com/getgrav/grav-theme-ceevee/issues
-license: Free
+license: CC BY 3.0
 
 form:
   validation: strict
