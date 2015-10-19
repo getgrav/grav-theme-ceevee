@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     {% block head %}
         <meta charset="utf-8" />
@@ -7,26 +9,16 @@
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.ico') }}" />
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
 
          {% block stylesheets %}
-                {% do assets.addCss('theme://css/bootstrap.min.css') %}
-                {% do assets.addCss('theme://css/jquery.fancybox.css') %}
+                {% do assets.addCss('theme://css/default.css') %}
+                {% do assets.addCss('theme://css/layout.css') %}
                 {% do assets.addCss('theme://css/flexslider.css') %}
-                {% do assets.addCss('theme://css/styles.css') %}
-                {% do assets.addCss('theme://css/queries.css') %}
-                {% do assets.addCss('theme://css/animate.css') %}
+                {% do assets.addCss('theme://css/media-queries.css') %}
+                {% do assets.addCss('theme://css/magnific-popup.css') %}
         {% endblock %}
         {{ assets.css() }}
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
         {% endblock head%}
     </head>
@@ -44,12 +36,15 @@
         {% endblock %}
 
         {% block javascripts %}
-            {% do assets.add('jquery',101) %}
-            {% do assets.addJs('theme://js/waypoints.min.js') %}
-            {% do assets.addJs('theme://js/bootstrap.min.js') %}
-            {% do assets.addJs('theme://js/scripts.js') %}
-            {% do assets.addJs('theme://js/jquery.flexslider.js') %}
             {% do assets.addJs('theme://js/modernizr.js') %}
+            {% do assets.add('jquery',101) %}
+            <script>window.jQuery || document.write('<script src="{{ url('theme://js/jquery-1.10.2.min.js') }}"><\/script>')</script>
+            <script type="text/javascript" src="{{ url('theme://js/jquery-migrate-1.2.1.min.js') }}"></script>
+            {% do assets.addJs('theme://js/jquery.flexslider.js') %}
+            {% do assets.addJs('theme://js/waypoints.js') %}
+            {% do assets.addJs('theme://js/jquery.fittext.js') %}
+            {% do assets.addJs('theme://js/magnific-popup.js') %}
+            {% do assets.addJs('theme://js/init.js') %}
         {% endblock %}
         {{ assets.js() }}
     </body>
