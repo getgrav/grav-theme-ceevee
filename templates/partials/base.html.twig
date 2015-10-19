@@ -20,9 +20,11 @@
         {% endblock %}
         {{ assets.css() }}
 
+        <script src="{{ url('theme://js/modernizr.js') }}"></script>
+
         {% endblock head%}
     </head>
-    <body id="top">
+    <body>
         {% block header %}
              {% include 'partials/header.html.twig' %}
         {% endblock %}
@@ -36,7 +38,6 @@
         {% endblock %}
 
         {% block javascripts %}
-            {% do assets.addJs('theme://js/modernizr.js') %}
             {% do assets.add('jquery',101) %}
             <script>window.jQuery || document.write('<script src="{{ url('theme://js/jquery-1.10.2.min.js') }}"><\/script>')</script>
             <script type="text/javascript" src="{{ url('theme://js/jquery-migrate-1.2.1.min.js') }}"></script>
