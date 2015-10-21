@@ -1,0 +1,32 @@
+<section id="about">
+    <div class="row">
+        <div class="three columns">
+            <img class="profile-pic"  src="{{ page.media.images['profilepic.jpg'].url }}" alt="" />
+        </div>
+
+        <div class="nine columns main-col">
+            {{ page.content }}
+            <div class="row">
+                <div class="columns contact-details">
+                    {% if page.header.address %}
+                    <h2>{{ page.header.title2 }}</h2>
+                    {% endif %}
+                    <p class="address">
+                        {% for item in page.header.address %}
+                        {{ item.line }} <br />
+                        {% endfor %}
+                    </p>
+                </div>
+                {% if page.header.buttons %}
+                <div class="columns download">
+                    <p>
+                        {% for button in page.header.buttons %}
+                            <a href="{{ button.url }}" class="button"><i class="fa fa-{{ button.icon }}"></i>{{ button.text }}</a>
+                        {% endfor %}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
