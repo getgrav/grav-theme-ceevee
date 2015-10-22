@@ -1,30 +1,39 @@
-<section class="portfolio text-center section-padding" id="portfolio">
-  <div class="container">
+<section id="portfolio">
     <div class="row">
-      {{ page.content }}
-      <div id="portfolioSlider">
-        <ul class="slides">
-          {% for row in page.header.portfolio|batch(3) %}
-          <li>
-            {% for item in row %}
-            <div class="col-md-4 wp4 {% if item.delay %}delay-{{ item.delay }}s{% endif %}">
-              <div class="overlay-effect effects clearfix">
-                <div class="img">
-                  <img src="{{ page.media[item.img].url }}" alt="Portfolio Item">
-                  <div class="overlay">
-                    <a href="{{ item.img_url }}" class="expand"><i class="fa fa-search"></i><br>{{ item.img_text }}</a>
-                    <a class="close-overlay hidden">x</a>
-                  </div>
+        <div class="twelve columns collapsed">
+            {{ page.content }}
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+                {% for item in page.header.portfolio %}
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+                        <a href="#modal-{{ loop.index }}" title="">
+                            {{ page.media[item.img].cropZoom(215, 215).html() }}
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>{{ item.title }}</h5>
+                                    <p>{{ item.description }}</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <h2>{{ item.title }}</h2>
-              <p>{{ item.content }}</p>
+                {% endfor %}
             </div>
-            {% endfor %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+        </div>
+        {% for item in page.header.portfolio %}
+        <div id="modal-{{ loop.index }}" class="popup-modal mfp-hide">
+            <img class="scale-with-grid" src="{{ page.media[item.img].url }}" alt="" />
+            <div class="description-box">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.content }}.</p>
+                <span class="categories"><i class="fa fa-tag"></i>{{ item.tags }}</span>
+            </div>
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-  </div>
 </section>
