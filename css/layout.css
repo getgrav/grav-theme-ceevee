@@ -630,7 +630,7 @@ call-to-action .button {
    color: #0D0D0D;
 }
 #call-to-action p span {
-	font-family: 'opensans-semibold', sans-serif; 
+	font-family: 'opensans-semibold', sans-serif;
 	color: #D8D8D8;
 }
 
@@ -654,7 +654,7 @@ call-to-action .button {
    padding-bottom: 66px;
 }
 #testimonials h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;   
+   font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 3px;
    color: #fff;
@@ -913,10 +913,14 @@ call-to-action .button {
 #twitter li span {
    display: block;
 }
-#twitter li b a {
+#twitter li b a, .timePosted {
    font: 13px/36px 'opensans-regular', Sans-serif;
    color: #474747 !important;
    border: none;
+}
+.widget_tweets .tweet {
+    margin-bottom: 0;
+    line-height: 30px;
 }
 
 
@@ -1003,4 +1007,3 @@ footer .social-links li:first-child { margin-left: 0; }
  	border-radius: 100%;
 }
 #go-top a:hover { background-color: #0F9095; }
-

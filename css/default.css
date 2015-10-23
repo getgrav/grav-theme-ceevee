@@ -118,6 +118,9 @@ table {
    border-spacing: 0;
 }
 
+.thm-dark .p-author .profile .p-name{
+    color: red !important;
+}
 
 /* ------------------------------------------------------------------ */
 /* c. Default and Basic Styles
@@ -801,7 +804,3 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-
-
-
-

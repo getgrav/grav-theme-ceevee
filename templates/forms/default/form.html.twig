@@ -1,0 +1,18 @@
+<div class="alert">{{ page.header.form.message }}</div>
+
+<form name="{{ page.header.form.name }}"
+      action="{{ uri.rootUrl ~ (page.header.form.action|default(module.route)) }}"
+      method="{{ page.header.form.method|upper|default('POST') }}">
+{% for field in page.header.form.fields %}
+    {% set value = page.header.form.value(field.name) %}
+    <div>
+        {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
+    </div>
+{% endfor %}
+
+	<div class="buttons">
+	{% for button in page.header.form.buttons %}
+	    <button class="submit" type="{{ button.type|default('submit') }}">{{ button.value|default('Submit') }}</button>
+	{% endfor %}
+	</div>
+</form>
