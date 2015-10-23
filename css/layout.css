@@ -922,7 +922,37 @@ call-to-action .button {
 .widget_tweets .tweet {
     margin-bottom: 0;
 }
-
+.widget_tweets .interact a {
+    padding-right: 10px;
+}
+#tw-widget1 .user {
+    padding: 20px 20px 16px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+#tw-widget1 .user a span {
+    position: absolute;
+    display: block;
+    top: 0;
+    text-align: left;
+}
+#tw-widget1 .user a span[data-scribe="element:name"] {
+    position: absolute;
+    top: 21px;
+    left: 65px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+#tw-widget1 .user a span[data-scribe="element:screen_name"] {
+    position: absolute;
+    top: 42px;
+    left: 65px;
+    font-size: 14px;
+    color: white;
+}
 
 /* ------------------------------------------------------------------ */
 /* i. Footer
