@@ -46,9 +46,8 @@
             {% do assets.addJs('theme://js/jquery.fittext.js') %}
             {% do assets.addJs('theme://js/magnific-popup.js') %}
             {% do assets.addJs('theme://js/init.js') %}
-            {% do assets.addJs('theme://js/twFetcher.js') %}
 
-
+            {% include 'partials/twFetcher.html.twig' %}
         {% endblock %}
         {{ assets.js() }}
     </body>

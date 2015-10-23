@@ -906,7 +906,7 @@ call-to-action .button {
    margin-top: 12px;
    padding: 0;
 }
-#twitter li {
+#twitter li, .widget_tweets li {
    margin: 6px 0px 12px 0;
    line-height: 30px;
 }
@@ -917,10 +917,10 @@ call-to-action .button {
    font: 13px/36px 'opensans-regular', Sans-serif;
    color: #474747 !important;
    border: none;
+   margin-bottom: 0;
 }
 .widget_tweets .tweet {
     margin-bottom: 0;
-    line-height: 30px;
 }
 
 
