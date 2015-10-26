@@ -10,11 +10,19 @@
         {% for page in pages.children %}
             {% if page.visible %}
                 {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
+                {% if 'home' in page.menu %}
+                <li class="current">
+                    <a class="smoothscroll" href="#home">
+                        {{ page.menu }}
+                    </a>
+                </li>
+                {% else %}
                 <li class="{{ current_page }}">
                     <a href="{{ page.url }}">
                         {{ page.menu }}
                     </a>
                 </li>
+                {% endif %}
             {% endif %}
         {% endfor %}
         {% for mitem in site.menu %}

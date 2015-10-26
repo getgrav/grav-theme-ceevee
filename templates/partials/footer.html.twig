@@ -1,18 +1,17 @@
 <footer>
-  <div class="container">
     <div class="row">
-    {% if site.footer.links %}
-    <div class="col-md-6">
-      <ul class="legals">
-        {% for item in site.footer.links %}
-        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
-        {% endfor %}
-      </ul>
+        <div class="twelve columns">
+            <ul class="social-links">
+                {% for item in site.social %}
+                <li><a href="{{ item.url }}"><i class="fa fa-{{ item.icon }}"></i></a></li>
+                {% endfor %}
+            </ul>
+            <ul class="copyright">
+                {% for item in site.copyright %}
+                <li>{{ item.line }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
     </div>
-    {% endif %}
-    <div class="col-md-6 credit">
-      <p>Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Peter Finlan</a> exclusively for <a href="http://tympanus.net/codrops/"><em>Codrops</em></a></p>
-    </div>
-  </div>
-</div>
 </footer>
