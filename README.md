@@ -17,6 +17,7 @@
 * Magnific popup lightbox
 * Smooth scrolling effect
 * Cross browser compatible
+* Twitter integration
 
 # Installation
 

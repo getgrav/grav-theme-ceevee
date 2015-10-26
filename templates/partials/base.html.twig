@@ -8,35 +8,27 @@
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
         <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
-
          {% block stylesheets %}
                 {% do assets.addCss('theme://css/default.css') %}
                 {% do assets.addCss('theme://css/layout.css') %}
-                {% do assets.addCss('theme://css/flexslider.css') %}
                 {% do assets.addCss('theme://css/media-queries.css') %}
                 {% do assets.addCss('theme://css/magnific-popup.css') %}
         {% endblock %}
         {{ assets.css() }}
-
         <script src="{{ url('theme://js/modernizr.js') }}"></script>
-
         {% endblock head%}
     </head>
     <body>
         {% block header %}
              {% include 'partials/header.html.twig' %}
         {% endblock %}
-
         {% block body %}
             {% block content %}{% endblock %}
         {% endblock %}
-
         {% block footer %}
              {% include 'partials/footer.html.twig' %}
         {% endblock %}
-
         {% block javascripts %}
             {% do assets.add('jquery',101) %}
             <script>window.jQuery || document.write('<script src="{{ url('theme://js/jquery-1.10.2.min.js') }}"><\/script>')</script>
@@ -46,7 +38,7 @@
             {% do assets.addJs('theme://js/jquery.fittext.js') %}
             {% do assets.addJs('theme://js/magnific-popup.js') %}
             {% do assets.addJs('theme://js/init.js') %}
-            {% include 'partials/twFetcher.html.twig' %}
+
         {% endblock %}
         {{ assets.js() }}
     </body>
