@@ -1,0 +1,22 @@
+<header id="home">
+  {% block navigation %}
+  {% include 'partials/navigation.html.twig' %}
+  {% endblock %}
+  <div class="row banner">
+    <div class="banner-text">
+      <h1 class="responsive-headline">{{ site.header.title }}</h1>
+      <h3>{{ site.header.description }}</h3>
+      <hr />
+      {% if site.social %}
+      <ul class="social">
+        {% for item in site.social %}
+        <li><a href="{{ item.url }}"><i class="fa fa-{{ item.icon }}"></i></a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+  <p class="scrolldown">
+    <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+  </p>
+</header>

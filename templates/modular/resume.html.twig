@@ -1,0 +1,37 @@
+<section id="resume">
+    {% for section in page.header.sections %}
+    <div class="row {{ section.css_class }}">
+        <div class="three columns header-col">
+            <h1><span>{{ section.title }}</span></h1>
+        </div>
+        <div class="nine columns main-col">
+            {% for item in section.items %}
+            <div class="row item">
+                <div class="twelve columns">
+                    {% if item.title %}
+                    <h3>{{ item.title }}</h3>
+                    {% endif %}
+                    {% if item.info or item.date %}
+                    <p class="info">{{ item.info }} <span>&bull;</span> <em class="date">{{ item.date }}</em></p>
+                    {% endif %}
+                    <p>
+                        {{ item.description }}
+                    </p>
+
+                    {% if item.skills %}
+                    <div class="bars">
+                        <ul class="skills">
+                            {% for skill in item.skills %}
+                            <li><span class="bar-expand" style="width: {{ skill.level }}%;animation: {{ skill.name|lower }} 2s ease;"></span><em>{{ skill.name }}</em></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</section>

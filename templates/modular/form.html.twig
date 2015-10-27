@@ -1,0 +1,33 @@
+<section id="contact">
+    <div class="row section-head">
+        <div class="two columns header-col">
+            <h1><span>{{ page.header.title }}</span></h1>
+        </div>
+        <div class="ten columns">
+            <p class="lead">{{ page.header.lead }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="eight columns">
+            {{ page.content }}
+            {% include "forms/form.html.twig" %}
+        </div>
+        <aside class="four columns footer-widgets">
+            {% for widget in page.header.widgets %}
+            <div class="widget widget_contact">
+                <h4>{{ widget.title }}</h4>
+                <p class="address">
+                    {% for item in widget.content %}
+                    {{ item.line }} <br />
+                    {% endfor %}
+                </p>
+            </div>
+            {% endfor %}
+            <div class="widget widget_tweets">
+                <h4 class="widget-title">Latest Tweets</h4>
+                <div id="tw-widget1">
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>

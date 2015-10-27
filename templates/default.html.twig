@@ -1,0 +1,13 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+<section class="intro text-center section-padding" id="introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 wp1">
+        <h1 class="arrow">{{ page.header.title }}</h1>
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
