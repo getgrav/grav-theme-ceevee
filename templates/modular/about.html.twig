@@ -15,6 +15,9 @@
                         {% for item in page.header.address %}
                         {{ item.line }} <br />
                         {% endfor %}
+                        {% for item in page.header.email %}
+                        {{ item.address|safe_email }} <br />
+                        {% endfor %}
                     </p>
                 </div>
                 {% if page.header.buttons %}

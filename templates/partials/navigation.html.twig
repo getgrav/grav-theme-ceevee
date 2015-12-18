@@ -1,7 +1,6 @@
-
 <nav id="nav-wrap">
     <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-    <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+    <a class="mobile-btn" href="#close" title="Hide navigation">Hide navigation</a>
 
     {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
     {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
