@@ -98,4 +98,4 @@ portfolio:
 
 In above example you can specify title, image, roll over text, url and content for each separate portfolio element.
 
-Rest of the sections is made in similar approach. Remember to preserve original idenation to avoid issues.
+Rest of the sections is made in similar approach. Remember to preserve original indentation to avoid issues.
