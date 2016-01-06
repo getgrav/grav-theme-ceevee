@@ -1,3 +1,12 @@
+# v1.2.0
+## 01/06/2016
+
+1. [](#improved)
+    * Updated to Fontawesome 4.5.0
+1. [](#bugfix)
+	* Fix typos
+	* Fixed duplicate property
+
 # v1.1.0
 ## 12/18/2015
 
