@@ -1,7 +1,1 @@
 enabled: true
-streams:
-  scheme:
-    theme:
-      type: ReadOnlyStream
-      paths:
-        - user/themes/ceevee
