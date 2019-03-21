@@ -1,5 +1,5 @@
 name: Ceevee
-version: 1.3.0
+version: 1.4.0
 description: "Ceevee is a clean, modern, fully responsive site template for your resume and portfolio."
 icon: group
 author:
@@ -11,6 +11,8 @@ demo: http://demo.getgrav.org/ceevee-skeleton
 keywords: ceevee, theme, modern, fast, responsive, html5, css3, resume
 bugs: https://github.com/getgrav/grav-theme-ceevee/issues
 license: CC BY 3.0
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
 
 form:
   validation: strict
