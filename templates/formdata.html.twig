@@ -4,7 +4,7 @@
     <div class="row">
         <div class="nine columns main-col">
             <h2>{{ form.message }}</h2>
-            {{ content }}
+            {{ content|raw }}
 
             {% include "forms/data.html.twig" %} <br />
             Back to <a href="{{ base_url_absolute }}">homepage</a>.

@@ -9,7 +9,7 @@
     </div>
     <div class="row">
         <div class="eight columns">
-            {{ page.content }}
+            {{ page.content|raw }}
             {% include "forms/form.html.twig" %}
         </div>
         <aside class="four columns footer-widgets">

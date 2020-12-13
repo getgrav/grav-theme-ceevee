@@ -5,7 +5,7 @@
   <div class="row banner">
     <div class="banner-text">
       <h1 class="responsive-headline">{{ site.header.title }}</h1>
-      <h3>{{ site.header.description }}</h3>
+      <h3>{{ site.header.description|raw }}</h3>
       <hr />
       {% if site.social %}
       <ul class="social">
