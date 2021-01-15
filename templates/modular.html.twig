@@ -4,10 +4,10 @@
 {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
 
 {% block content %}
-    {{ page.content }}
+    {{ page.content|raw }}
     <div id="content">
         {% for module in page.collection() %}
-                {{ module.content }}
+                {{ module.content|raw }}
         {% endfor %}
     </div>
 {% endblock %}

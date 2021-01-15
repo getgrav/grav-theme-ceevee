@@ -5,7 +5,7 @@
         </div>
 
         <div class="nine columns main-col">
-            {{ page.content }}
+            {{ page.content|raw }}
             <div class="row">
                 <div class="columns contact-details">
                     {% if page.header.address %}

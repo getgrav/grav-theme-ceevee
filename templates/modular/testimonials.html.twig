@@ -4,14 +4,14 @@
             <div class="two columns header-col">
                 <h1><span>{{ page.header.title }}</span></h1>
             </div>
-            {{ page.content }}
+            {{ page.content|raw }}
             <div class="ten columns flex-container">
                 <div class="flexslider">
                     <ul class="slides">
                         {% for item in page.header.testimonials %}
                         <li>
                             <blockquote>
-                                <p>{{ item.content }}</p>
+                                <p>{{ item.content|raw }}</p>
                                 <cite>{{ item.author }}</cite>
                             </blockquote>
                         </li>
