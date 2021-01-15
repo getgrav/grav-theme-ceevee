@@ -1,5 +1,7 @@
 name: Ceevee
-version: 1.4.0
+slug: ceevee
+type: theme
+version: 1.4.1
 description: "Ceevee is a clean, modern, fully responsive site template for your resume and portfolio."
 icon: group
 author:
