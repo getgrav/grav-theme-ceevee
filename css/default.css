@@ -28,7 +28,8 @@ e. Others
 
 @import url("fonts.css");
 @import url("fontello/css/fontello.css");
-@import url("font-awesome/css/font-awesome.min.css");
+@import url("font-awesome/css/all.min.css");
+@import url("font-awesome/css/v4-shims.min.css");
 
 /* ------------------------------------------------------------------
 /* b. Reset
