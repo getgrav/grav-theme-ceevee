@@ -1,3 +1,9 @@
+# v1.4.2
+## 09/09/2026
+
+1. [](#bugfix)
+    * The deferred assets block now outputs JavaScript as well as CSS, so scripts a plugin adds to the page are no longer dropped [#16](https://github.com/getgrav/grav-theme-ceevee/pull/16)
+
 # v1.4.1
 ## 01/15/2021
 
