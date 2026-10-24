@@ -1,3 +1,10 @@
+# v1.4.3
+## 10/24/2026
+
+1. [](#bugfix)
+    * Updated the theme's JavaScript to work with jQuery 3, which current Grav versions load
+    * Scripts are no longer loaded twice on every page, which made the testimonials slider show duplicate controls
+
 # v1.4.2
 ## 09/09/2026
 
